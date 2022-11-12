@@ -1,0 +1,28 @@
+{
+	"ProfileID": 8,
+	"Depth": 3,
+	"PillarSize": 5,
+	"PillarShear": 10,
+	"SupportSize": 10,
+	"BlockHeight": 5,
+	"BlockWidth": 30,
+	"Shape": 0,
+	"CureTimes": "2,4,5,6,7,8,9,10,11,12,13,14,15,16",
+	"Cures": [
+		2,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11,
+		12,
+		12.199999809265137,
+		13,
+		14,
+		15,
+		16
+	]
+}

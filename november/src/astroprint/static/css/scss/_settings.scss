@@ -1,0 +1,680 @@
+.row.container {
+  background: #fff;
+  border: 1px solid #ccc;
+  @include radius($global-radius);
+}
+
+.zebra {
+  background: url("/img/subtle_zebra_3d.png") 0 0 repeat;
+}
+
+#settings-view {
+  .element-list {
+    > .row {
+      padding: 5px 0;
+
+      &:nth-child(odd) {
+        background: #fafafa;
+      }
+    }
+  }
+}
+
+#settings-side-bar {
+  background: white;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  border-right: 1px solid #ccc;
+
+  .side-nav {
+    padding-top: 0;
+    li {
+      padding: 10px 20px;
+      font-size: rem-calc(22);
+      margin: 0;
+
+      &.dotted {
+        border-top: 1px dotted #e2e2e2;
+      }
+
+      a {
+        color: $success-color;
+                padding: 0 10px;
+      }
+
+      &.heading {
+        background: url("/img/subtle_zebra_3d.png") 0 0 repeat;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        color: #505050;
+        font-size: rem-calc(30);
+      }
+
+      &.heading:first-child {
+        border-top: none;
+      }
+
+      &.active {
+        background-color: #fafafa;
+
+        a {
+          font-family: "nexa_boldregular", Helvetica, Arial, sans-serif;
+        }
+      }
+    }
+  }
+}
+
+#printer-connection {
+  label {
+    p {
+      font-family: $body-font-family;
+    }
+  }
+
+  .connection-status {
+    text-align: center;
+
+    span {
+      display: none;
+      font-size: rem-calc(25);
+    }
+  }
+
+  &.connecting {
+    span.connecting {
+      display: inline-block;
+      i {
+        color: $success-color;
+      }
+    }
+
+    .loading-button {
+      &.connect,
+      &.reconnect {
+        display: none;
+      }
+    }
+  }
+
+  &.failed {
+    span.failed {
+      display: inline-block;
+      i {
+        color: $alert-color;
+      }
+    }
+
+    .loading-button {
+      &.disconnect,
+      &.reconnect {
+        display: none;
+      }
+    }
+  }
+
+  &.connected {
+    span.connected {
+      display: inline-block;
+      i {
+        color: $success-color;
+      }
+    }
+
+    .loading-button {
+      &.connect {
+        display: none;
+      }
+    }
+  }
+
+  &.closed {
+    .loading-button {
+      &.disconnect,
+      &.reconnect {
+        display: none;
+      }
+    }
+  }
+}
+
+#printer-profile {
+  .toggle {
+    .side-label {
+      position: relative;
+      top: -10px;
+      font-size: rem-calc(12);
+    }
+
+    .switch {
+      margin: 0px 10px;
+
+      label {
+        background: #666;
+      }
+    }
+  }
+
+  .movement {
+    i {
+      font-size: 25px;
+      vertical-align: middle;
+    }
+  }
+}
+
+#wifi-network-list-modal {
+  table {
+    max-width: 100%;
+    border: none;
+
+    button, .button {
+      margin-bottom: 0;
+    }
+
+    td {
+      &.network-name {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .active-network {
+        padding: 5px;
+        text-align: center;
+        color: $success-color;
+      }
+    }
+  }
+}
+
+#wifi-hotspot {
+    .icon-attention {
+        color: $alert-color;
+        font-size: rem-calc(36);
+    }
+    .no-hotspot {
+        h4 {
+            color: $steel;
+        }
+    }
+}
+
+#internet-connection {
+  i {
+    color: $success-color;
+  }
+
+  .connection {
+    padding: 10px 0;
+
+    .ip-address {
+      font-size: rem-calc(16);
+      color: #a5a5a5;
+    }
+
+    .loading-button {
+      margin-top: 10px;
+    }
+  }
+
+  .hotspot-off {
+    padding: 15px 0;
+
+    label {
+      font-size: rem-calc(18);
+      line-height: 1.2em;
+    }
+  }
+
+  .stored-wifis {
+    > .row {
+      .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .action i {
+        color: $alert-color;
+      }
+
+      .active i {
+        visibility: hidden;
+      }
+
+      &.active {
+        .active i {
+          visibility: inherit;
+        }
+      }
+    }
+  }
+}
+
+#delete-stored-wifi-modal {
+  .active {
+    display: none;
+  }
+
+  &.active {
+    .active {
+      display: block
+    }
+  }
+}
+
+#network-name {
+  .preview {
+    color: #ccc;
+    font-size: rem-calc(16);
+    text-align: left;
+    padding-left: 10px;
+
+    li {
+      margin-bottom: 5px;
+      list-style: none;
+    }
+
+    span.bold, i {
+      color: $success-color;
+    }
+  }
+}
+
+#video-stream {
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    button, .button {
+        margin-bottom: 0;
+    }
+
+    .error-message {
+        border: 3px dashed $base;
+        background: #efefef;
+        padding: 15px;
+        @include radius($global-radius);
+
+        p {
+            color: $steel;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .icon-attention{
+        font-size: 36px;
+        color: $red;
+    }
+
+    div.field-value {
+      margin-bottom: 20px;
+      margin-top: -10px;
+    }
+}
+
+#software-update-modal {
+  h2 span {
+    color: black;
+  }
+
+  .package-info {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    @include radius($global-radius);
+
+    h4 {
+      font-size: 16px;
+
+      i {
+        font-size: 25px;
+        vertical-align: middle;
+
+        &.icon-ok-circled {
+          color: $success-color;
+        }
+
+        &.icon-attention {
+          color: $alert-color;
+        }
+      }
+    }
+
+    ul {
+      margin: 0px;
+
+      li {
+        list-style: none;
+
+        &.rel-notes {
+          margin-top: 10px;
+
+          > div {
+            padding-top: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#software-update {
+  h4 {
+    line-height: 1em;
+
+    small {
+      color: #ccc;
+      -moz-user-select: initial;
+        -webkit-user-select: initial;
+        -ms-user-select: initial;
+        user-select: inital;
+    }
+
+    margin-bottom: 20px;
+  }
+
+  .additional-sw-container {
+    background-color: #fafafa;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    @include radius($global-radius);
+
+    h3 {
+      text-align: left;
+      font-size: 15px;
+    }
+
+    ul {
+      text-align: left;
+      margin: 0px;
+
+      li {
+        list-style: none;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+#software-plugins {
+  .file-upload-view {
+    position: relative;
+
+    input[type=file] {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .upload-progress {
+    .progress-message {
+      font-size: rem-calc(18);
+      color: $success-color;
+    }
+
+    .meter {
+      transition: width 1s;
+    }
+  }
+
+  .installed {
+    > .row {
+      .name {
+        .version {
+          font-size: rem-calc(12);
+          color: #ccc;
+        }
+
+        .icon-ok-circled {
+          color: $success-color;
+        }
+      }
+
+      .icon-trash {
+        color: $alert-color;
+      }
+    }
+
+    .empty {
+      text-align: center;
+      color: #ccc;
+
+      i {
+        display: block;
+        font-size: rem-calc(80);
+      }
+    }
+  }
+}
+
+#software-license {
+  .license-info {
+    display: table;
+
+    h1 {
+      height: 100px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .certificate-icon {
+      position: relative;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      width: 140px;
+
+      .status-icon {
+        position: absolute;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
+      }
+
+      i {
+        font-size: 100px;
+        color: #ddd;
+
+        &.ok, &.nok {
+          display: none;
+          font-size: 30px;
+        }
+
+        &.ok {
+          color: $success-color;
+        }
+
+        &.nok {
+          color: $warning-color;
+        }
+      }
+    }
+
+    &.ok {
+      .certificate-icon i.ok {
+        display: inline;
+      }
+    }
+
+    &.nok {
+      .certificate-icon i.nok {
+        display: inline;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
+
+.settings-page {
+  padding: 20px;
+
+  label {
+    font-size: rem-calc(22);
+  }
+
+  .serial-container {
+    padding-top: 15px;
+    border-top: 1px dotted #ccc;
+
+    div {
+      padding: 0;
+    }
+
+    label {
+      text-align: left;
+      font-size: rem-calc(18);
+
+      i {
+        color: $alert-color;
+      }
+    }
+  }
+}
+
+#software-advanced {
+  .apiKey {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+  .apikey-regenerate {
+    margin-top: 10px;
+    border-top: 1px dotted #ccc;
+
+    padding: 15px 0;
+
+    label {
+      text-align: left;
+      font-size: rem-calc(18);
+      line-height: 1.4em;
+    }
+  }
+}
+
+#temperature-presets{
+
+  h5{
+    color: $base;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    margin-top: 20px;
+    border-bottom: 2px solid #f4f4f4;
+    line-height: 120%;
+    font-size: 16px;
+  }
+
+  .new-preset button{
+    letter-spacing: 1px;
+    box-shadow: inset 0 -5px 0 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0 -5px 0 0px rgba(0, 0, 0, 0.15);
+    margin: 10px auto 0 auto;
+  }
+
+  img{
+    height: 26px;
+    filter: grayscale(100%);
+    opacity: 0.2;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+
+    &.icon-extruder{
+      height: 35px;
+    }
+
+    &.icon-bed{
+      top: 8px;
+    }
+  }
+
+  .extruder-temp,.bed-temp{
+    position: relative;
+    padding-top: 5px;
+
+    b{
+      width: 100%;
+      color: #f05151;
+      font-size: 18px;
+      margin-left: 2px;
+    }
+  }
+
+  a{
+    font-size: 29px;
+    border: 0;
+    color: #333333;
+
+    &.delete-preset{
+      color: #f05151;
+    }
+  }
+
+  .no-padding{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-left: 1px dotted #cccccc;
+  }
+}
+
+#preset-form{
+  label{margin-top: 10px;}
+
+  img{
+    max-width: 30px;
+    padding-top: 6px;
+    margin-right: 10px;
+
+    &.icon-bed{
+      max-width: 38px;
+    }
+  }
+}
+
+
+@media #{$small-only} {
+  #settings-view {
+    .settings-page.hide {
+      display: block;
+    }
+  }
+
+  .zebra h1 {
+    margin: 0;
+    margin-bottom: 1px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: rem-calc(18);
+  }
+
+  .zebra.software h1 {
+    margin: 0;
+    border: none;
+  }
+
+  #temperature-presets .stored-presets{margin: 0 -20px;}
+
+}

@@ -1,0 +1,13 @@
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+## Uncomment the following section to setup wifi connection
+#network={
+#   ssid="Wifi Name/SSID"
+#   psk="Password"
+#}
+## You can have more than one wifi network
+#network={
+#   ssid="Wifi Name/SSID"
+#   psk="Password"
+#}

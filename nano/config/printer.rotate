@@ -1,0 +1,9 @@
+/var/log/printer.log {
+	rotate 12
+	compress
+	missingok
+	notifempty
+	size=10k
+	copytruncate
+	su root
+}

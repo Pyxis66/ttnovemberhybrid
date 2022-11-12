@@ -1,0 +1,102 @@
+[
+	{
+		"ID": 0,
+		"Name": "Turn On Post-Curing Lamp",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "[[GPIOHigh 37]]\r\n[[GPIOHigh 35]]\r\n",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 1,
+		"Name": "Turn Off Post-Curing Lamp",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-danger",
+		"Syscall": "",
+		"Gcode": "[[GPIOLow 37]]\r\n[[GPIOLow 35]]\r\n",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 2,
+		"Name": "Turn On Projector Fans",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "[[GPIOHigh 33]]\r\n[[GPIOHigh 31]]",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 3,
+		"Name": "Turn Off Projector Fans",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-danger",
+		"Syscall": "",
+		"Gcode": "[[GPIOLow 33]]\r\n[[GPIOLow 31]]",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 4,
+		"Name": "Lower Platform",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-info",
+		"Syscall": "",
+		"Gcode": "G28 Z\r\nG90\r\nG1Z0F150\r\n[[PositionSet 0]]\r\n\r\n\r\n",
+		"ConfirmText": "Are you sure you want to home? "
+	},
+	{
+		"ID": 5,
+		"Name": "Projector Initial Commands",
+		"Position": "/projector-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 012]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]",
+		"ConfirmText": "Are you sure you want to configure the projector? "
+	},
+	{
+		"ID": 6,
+		"Name": "Raise Platform",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "G28 Z\r\n[[PositionSet 165.1]]\r\n\r\n\r\n",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 7,
+		"Name": "Platform Test",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "G28 Z\r\nG90\r\nG1Z0F150\r\n[[PositionSet 0]]\r\nG28 Z\r\nG90\r\nG1Z0F150\r\n[[PositionSet 0]]\r\nG28 Z\r\nG90\r\nG1Z0F150\r\n[[PositionSet 0]]\r\n",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 8,
+		"Name": "Projector's Eco Mode ON/OFF",
+		"Position": "/projector-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-info",
+		"Syscall": "",
+		"Gcode": "[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 1]]\r\n[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 008]]\r\n",
+		"ConfirmText": "Are you sure you want to toggle eco mode?"
+	},
+	{
+		"ID": 9,
+		"Name": "Reset Projector To Default Config",
+		"Position": "/projector-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-danger",
+		"Syscall": "",
+		"Gcode": "[[Projector * 0 IR 008]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 010]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 009]]\r\n[[Delay 0.1]]\r\n[[Projector * 0 IR 011]]",
+		"ConfirmText": "Are you sure you want to reset the projector to its default configuration?"
+	}
+]

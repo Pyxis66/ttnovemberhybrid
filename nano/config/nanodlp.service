@@ -1,0 +1,10 @@
+[Unit]
+Description=NanoDLP service
+After=systemd-user-sessions.service plymouth-quit-wait.service
+
+[Service]
+WorkingDirectory=/home/pi/printer
+ExecStart=/bin/bash /home/pi/printer/config/run.sh
+
+[Install]
+WantedBy=multi-user.target

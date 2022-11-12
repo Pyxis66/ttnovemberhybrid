@@ -1,0 +1,102 @@
+[
+	{
+		"ID": 0,
+		"Name": "UPDATE Z POSITION",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "M114",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 1,
+		"Name": "Home Printer Z Axis",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "G28\r\nG90\r\n[[PositionSet 0]]",
+		"ConfirmText": "Confirm Build Plate is Clear!"
+	},
+	{
+		"ID": 2,
+		"Name": "Turn Motor Power On",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "M17",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 3,
+		"Name": "Turn Motor Power Off",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-danger",
+		"Syscall": "",
+		"Gcode": "M84",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 4,
+		"Name": "RAMPS Shutter Open",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-success",
+		"Syscall": "",
+		"Gcode": "M280 P2 S160",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 5,
+		"Name": "RAMPS Shutter Close",
+		"Position": "/projector-calibration",
+		"Condition": "",
+		"Color": "btn btn-danger",
+		"Syscall": "",
+		"Gcode": "M280 P2 S0",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 6,
+		"Name": "Resin Drain Tilt 20mm",
+		"Position": "/",
+		"Condition": "Idle",
+		"Color": "btn btn-warning",
+		"Syscall": "",
+		"Gcode": "M650 T20\r\nM653",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 7,
+		"Name": "Return From Tilt",
+		"Position": "/",
+		"Condition": "Idle",
+		"Color": "btn btn-info",
+		"Syscall": "",
+		"Gcode": "M654",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 8,
+		"Name": "Resin Drain Tilt 20mm",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-warning",
+		"Syscall": "",
+		"Gcode": "M650 T20\r\nM653",
+		"ConfirmText": ""
+	},
+	{
+		"ID": 9,
+		"Name": "Return From Tilt",
+		"Position": "/z-calibration",
+		"Condition": "Idle",
+		"Color": "btn btn-info",
+		"Syscall": "",
+		"Gcode": "M654",
+		"ConfirmText": ""
+	}
+]
